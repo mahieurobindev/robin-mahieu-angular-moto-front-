@@ -1,0 +1,28 @@
+<p>moto-details works!</p>
+
+{{ moto$ | async | json }}
+
+<mat-card class="example-card" *ngIf="moto$ | async; let moto">
+  <mat-card-header>
+    <mat-card-title
+      >{{ moto.Marque | titlecase }}
+      {{ moto.Modele | uppercase }}</mat-card-title
+    >
+  </mat-card-header>
+
+  <mat-card-content>
+    <ul>
+      <li><b>Date of birth :</b> {{ moto.Datesortie }}</li>
+    </ul>
+  </mat-card-content>
+  <mat-card-actions>
+    <button mat-raised-button color="warn" (click)="deleteMoto(moto.id)">
+      Delete
+    </button>
+    <button mat-raised-button color="primary" (click)="updateMoto(moto)">
+      Update
+    </button>
+  </mat-card-actions>
+</mat-card>
+
+<button mat-raised-button color="warn" (click)="goBack()">Go Back</button>
