@@ -8,6 +8,9 @@ import { environment } from 'src/environments/environment';
   providedIn: 'root',
 })
 export class MotoService {
+  delete(id: number) {
+    throw new Error('Method not implemented.');
+  }
   private readonly motoPath: string = '/motos';
 
   constructor(private _http: HttpClient) {}
