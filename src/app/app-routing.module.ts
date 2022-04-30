@@ -9,7 +9,7 @@ const routes: Routes = [
     pathMatch: 'full',
   },
   {
-    path: 'motos',
+    path: 'moto',
     loadChildren: () => import('./moto/moto.module').then((m) => m.MotoModule),
   },
   {
