@@ -1,1 +1,39 @@
 <p>moto-list works!</p>
+{{ motos$ | async | json }}
+
+<table mat-table []="motos$" class="mat-elevation-z8">
+  <!-- Name Column -->
+  <ng-container matColumnDef="id">
+    <th mat-header-cell *matHeaderCellDef>ID</th>
+    <td mat-cell *matCellDef="let element">
+      {{ element.id }}
+      {{ setId(element.id) }}
+    </td>
+  </ng-container>
+
+  <!-- Name Column -->
+  <ng-container matColumnDef="Marque">
+    <th mat-header-cell *matHeaderCellDef>Marque</th>
+    <td mat-cell *matCellDef="let element">{{ element.Marque }}</td>
+  </ng-container>
+
+  <!-- Name Column -->
+  <ng-container matColumnDef="Modele">
+    <th mat-header-cell *matHeaderCellDef>Modele</th>
+    <td mat-cell *matCellDef="let element">{{ element.lastName }}</td>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr
+    mat-row
+    *matRowDef="let row; columns: displayedColumns"
+    (click)="showMotoDetails(row)"
+    class="clickable"
+  ></tr>
+</table>
+
+<br />
+
+<button mat-raised-button color="primary" (click)="createMoto()">Create</button>
+
+<br />

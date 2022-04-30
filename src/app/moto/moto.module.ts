@@ -7,9 +7,9 @@ import { MotoListComponent } from './pages/moto-list/moto-list.component';
 import { MotoDetailsComponent } from './pages/moto-details/moto-details.component';
 import { MotoFormComponent } from './components/moto-form/moto-form.component';
 import { HttpClientModule } from '@angular/common/http';
-//import { MotoService } from './services/moto.service';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
+import { MotoService } from '../services/moto.service';
 
 @NgModule({
   declarations: [
@@ -26,6 +26,6 @@ import { MatNativeDateModule } from '@angular/material/core';
     MatDatepickerModule,
     MatNativeDateModule,
   ],
-  providers: [MatDatepickerModule, MatNativeDateModule],
+  providers: [MotoService, MatDatepickerModule, MatNativeDateModule],
 })
 export class MotoModule {}
