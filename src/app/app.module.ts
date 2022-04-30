@@ -8,6 +8,7 @@ import { MotoDetailsComponent } from './moto/pages/moto-details/moto-details.com
 import { MotoListComponent } from './moto/pages/moto-list/moto-list.component';
 import { Moto } from './moto./moto..component';
 import { MotoComponent } from './moto/moto.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { MotoComponent } from './moto/moto.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
