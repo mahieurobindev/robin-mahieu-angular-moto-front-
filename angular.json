@@ -108,6 +108,16 @@
             ],
             "scripts": []
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {
+            "prerender": false,
+            "ssr": false,
+            "browserTarget": "moto-app:build:production",
+            "firebaseProject": "app-moto-robin-mahieu",
+            "firebaseHostingSite": "app-moto-robin-mahieu"
+          }
         }
       }
     }

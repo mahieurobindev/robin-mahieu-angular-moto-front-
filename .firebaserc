@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "app-moto-robin-mahieu": {
+      "hosting": {
+        "moto-app": [
+          "app-moto-robin-mahieu"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "app-moto-robin-mahieu"
+  }
+}
